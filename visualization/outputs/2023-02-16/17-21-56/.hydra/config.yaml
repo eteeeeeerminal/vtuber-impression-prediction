@@ -1,0 +1,8 @@
+run_n: 24
+logname: 2023-01-05T12-33-20-audio-2e69f291
+logdir: data/lightning_logs
+legend: 2023-01-05T12-36-58-audio-36a9a96f
+output: output/logfbank
+legend_title: learning rate, weight decay
+y_min: 0.08
+y_max: 0.2

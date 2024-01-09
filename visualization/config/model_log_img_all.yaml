@@ -1,0 +1,8 @@
+run_n: 24
+logname: 2023-01-11T13-09-44-image-637fc1dd
+logdir: data/lightning_logs
+legend: 2023-01-11T13-09-44-image-637fc1dd
+output: output/img_all
+legend_title: learning rate, dropout, weight decay
+y_min: 0.0
+y_max: 0.2

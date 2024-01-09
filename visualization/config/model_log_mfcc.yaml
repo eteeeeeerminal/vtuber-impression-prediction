@@ -1,0 +1,8 @@
+run_n: 24
+logname: 2023-01-06T09-04-40-audio-e71b1f34
+logdir: data/lightning_logs
+legend: 2023-01-06T09-07-26-audio-b1dd8ab5
+output: output/mfcc
+legend_title: learning rate, weight decay
+y_min: 0.08
+y_max: 0.2
