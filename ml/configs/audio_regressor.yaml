@@ -1,0 +1,30 @@
+seed: 5555
+save_dir: outputs/${version}
+experiment_id: "audio-${experiment_id:}"
+version: ${now:%Y-%m-%d}T${now:%H-%M-%S}-${experiment_id}
+valid_ratio: 0.1
+test_ratio: 0.2
+dataset:
+  audios_dir: "/home/kuon/workspace/data/audio/annotated/features/mfcc"
+  label_path: "/home/kuon/workspace/data/preprocess-for-ml/data/labeled-dataset/labeled-dataset.json"
+  label_type: "imp_all"
+  label_transform: null
+  vec_num: 3072
+  min_vec: 1000
+  max_vec: 10000
+  vtuber_info_path: "/home/kuon/workspace/data/vtuber-scraper/dataset/merged.json"
+train:
+  max_epoch: 2
+  batch_size: 128
+  lr: 0.00001
+  momentum: 0.9
+  gamma: 0.1
+  weight_decay: 1.0
+  two_layer: true
+
+hydra:
+  run:
+    dir: ${save_dir}
+  sweep:
+    dir: ${save_dir}
+    subdir: ${hydra.job.num}

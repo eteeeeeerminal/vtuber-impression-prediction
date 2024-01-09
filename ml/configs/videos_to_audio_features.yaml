@@ -1,0 +1,19 @@
+video_dir: "/home/kuon/workspace/data/videos/annotated"
+audio_features_dir: "/home/kuon/workspace/data/audio/annotated/features"
+logfbank:
+  sample_rate: 44100
+  winlen: 0.01
+  winstep: 0.005
+  nfilt: 26
+  nfft: 512
+  lowfreq: 0
+  preemph: 0.97
+mfcc:
+  sample_rate: 44100
+  winlen: 0.01
+  winstep: 0.005
+  numcep: 13
+  nfilt: 26
+  nfft: 512
+  lowfreq: 0
+  preemph: 0.97

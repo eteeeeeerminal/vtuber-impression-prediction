@@ -1,0 +1,30 @@
+seed: 5555
+save_dir: outputs/${version}
+experiment_id: "image-${experiment_id:}"
+version: ${now:%Y-%m-%d}T${now:%H-%M-%S}-${experiment_id}
+pretrained_path: "./model/senet/pretrained/senet50_ft_weight.pkl"
+valid_ratio: 0.1
+test_ratio: 0.2
+dataset:
+  imgs_dir: "/home/kuon/workspace/data/images/annotated"
+  img_ext: ".jpg"
+  label_path: "/home/kuon/workspace/data/preprocess-for-ml/data/labeled-dataset/labeled-dataset.json"
+  label_type: "imp_all"
+  max_frame: 1000
+  vtuber_info_path: "/home/kuon/workspace/data/vtuber-scraper/dataset/merged.json"
+train:
+  max_epoch: 2
+  batch_size: 64
+  dropout: 0.5
+  lr: 0.0001
+  momentum: 0.9
+  gamma: 0.1
+  weight_decay: 0.0
+  train_final_layer_only: false
+
+hydra:
+  run:
+    dir: ${save_dir}
+  sweep:
+    dir: ${save_dir}
+    subdir: ${hydra.job.num}

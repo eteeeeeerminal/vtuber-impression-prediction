@@ -1,0 +1,4 @@
+video_dir: "/home/kuon/workspace/data/videos/annotated"
+image_dir: "/home/kuon/workspace/data/images/annotated"
+output_fps: 6
+output_size: [256, 256]
